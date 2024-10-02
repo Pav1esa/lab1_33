@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Павлеса Олег ПП-21</title>
+	</head>
+	<body>
+		<script>
+			"use strict";
+			
+			// Введення значень
+			let x = parseFloat(prompt("Введіть значення x (радіани для тригонометричних функцій):", ""));
+			let y = parseFloat(prompt("Введіть значення y:", ""));
+			
+			// Обчислення виразу
+			let numerator = Math.pow(x, 3) + Math.cos(y) * Math.exp(x) - Math.sqrt(Math.abs(x * y));
+			let denominator = Math.sin(x) + Math.log(y) + Math.tan(x);
+			
+			// Ділення на нуль перевірка
+			if (denominator !== 0) {
+				let result = numerator / denominator;
+				alert("Результат обчислення: r = " + result.toFixed(3));
+			} else {
+				alert("Неможливо виконати обчислення через ділення на нуль.");
+			}
+			
+			// Додаткові обчислення
+			let maxVal = Math.max(x, y, numerator, denominator);
+			let minVal = Math.min(x, y, numerator, denominator);
+			alert("Максимальне значення серед всіх чисел: " + maxVal.toFixed(3));
+			alert("Мінімальне значення серед всіх чисел: " + minVal.toFixed(3));
+			
+		</script>
+	</body>
+</html>
